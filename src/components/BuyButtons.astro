@@ -1,0 +1,12 @@
+---
+import { site } from "../site";
+interface Props { shopeeUrl?: string; productName?: string }
+const { shopeeUrl = site.shopeeUrl } = Astro.props;
+---
+<div class="buy">
+  <a class="btn primary" href={shopeeUrl} target="_blank" rel="noopener">Mua trên Shopee</a>
+  {site.zaloUrl && <a class="btn" href={site.zaloUrl} target="_blank" rel="noopener">Nhắn Zalo để đặt</a>}
+</div>
+<style>
+  .buy { display: flex; flex-wrap: wrap; gap: 10px; }
+</style>
