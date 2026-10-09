@@ -32,4 +32,4 @@ Bỏ ảnh vào `public/images/` (vd `public/images/moc-khoa-nfc.jpg`) rồi đi
 
 ## Đưa lên mạng
 
-Web là trang tĩnh, đưa lên Vercel hoặc Netlify miễn phí: đăng nhập bằng GitHub, chọn repo này, framework Astro, build command `npm run build`, thư mục `dist`. Khi có tên miền, sửa `site` trong `astro.config.mjs`.
+Web là trang tĩnh, đưa lên Vercel hoặc Netlify miễn phí: đăng nhập bằng GitHub, chọn repo này, framework Astro, build command `npm run build`, thư mục `dist`. Tên miền tiemcatsette.com: thêm vào mục Domains của Vercel/Netlify rồi trỏ DNS theo hướng dẫn ở đó. Nếu đổi tên miền, sửa `site` trong `astro.config.mjs`.

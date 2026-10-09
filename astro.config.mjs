@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-// Đổi thành tên miền thật khi có (vd https://catsette.vn)
+// Tên miền chính của web
 export default defineConfig({
-  site: "https://catsette.vercel.app",
+  site: "https://tiemcatsette.com",
 });
