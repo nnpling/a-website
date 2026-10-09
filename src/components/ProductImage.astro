@@ -1,0 +1,12 @@
+---
+import Placeholder from "./Placeholder.astro";
+import { categoryName, type Product } from "../lib/products";
+interface Props { product: Product; seed?: number }
+const { product, seed } = Astro.props;
+---
+{product.image
+  ? <img src={product.image} alt={product.shortName} loading="lazy" />
+  : <Placeholder label={categoryName(product.categorySlug)} seed={seed} />}
+<style>
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
+</style>

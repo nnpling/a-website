@@ -1,0 +1,69 @@
+---
+import Base from "../../layouts/Base.astro";
+import ProductImage from "../../components/ProductImage.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import BuyButtons from "../../components/BuyButtons.astro";
+import { categoryName, formatPrice, formatVnd, products, type Product } from "../../lib/products";
+
+export function getStaticPaths() {
+  return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
+}
+
+const { product } = Astro.props as { product: Product };
+const related = products.filter((p) => p.categorySlug === product.categorySlug && p.slug !== product.slug).slice(0, 4);
+---
+<Base title={product.shortName} description={product.name}>
+  <div class="wrap section">
+    <p class="crumbs"><a href="/san-pham/">Sản phẩm</a> / <a href={`/san-pham/#${product.categorySlug}`}>{categoryName(product.categorySlug)}</a></p>
+    <div class="layout">
+      <div class="media"><ProductImage product={product} /></div>
+      <div>
+        <p class="tag">{product.type === "custom" ? "Làm theo yêu cầu" : "Có sẵn"}</p>
+        <h1>{product.shortName}</h1>
+        <p class="price">{formatPrice(product)}</p>
+        <p class="muted">{product.name}</p>
+        {product.type === "custom"
+          ? <p class="info">Sau khi đặt, nhắn tiệm <strong>hình ảnh, tên và bài hát</strong> bạn muốn in. Tiệm gửi bản thiết kế để bạn duyệt trước khi in.</p>
+          : <p class="info">Có {product.variantCount} mẫu để chọn{product.note ? ` (${product.note.toLowerCase()})` : ""}. Xem hết các mẫu trên Shopee.</p>}
+        <BuyButtons shopeeUrl={product.shopeeUrl} />
+      </div>
+    </div>
+
+    {product.variants.length > 0 && (
+      <section class="prices">
+        <h2>Bảng giá theo mẫu</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Mẫu / kích thước</th><th scope="col">Giá</th></tr></thead>
+            <tbody>
+              {product.variants.map((v) => <tr><td>{v.label}</td><td>{v.price ? formatVnd(v.price) : "Liên hệ"}</td></tr>)}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section class="related">
+        <h2>Cùng danh mục</h2>
+        <div class="grid">{related.map((p, i) => <ProductCard product={p} seed={i + 1} />)}</div>
+      </section>
+    )}
+  </div>
+</Base>
+<style>
+  .crumbs { font-size: .9rem; color: var(--muted); margin: 0 0 16px; }
+  .layout { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; align-items: start; }
+  @media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
+  .media { aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  .tag { display: inline-block; margin: 0; background: var(--soft); color: var(--accent-ink); font-weight: 600; font-size: .8rem; padding: 4px 10px; border-radius: 999px; }
+  h1 { margin: 12px 0 8px; font-size: clamp(1.5rem, 3.5vw, 2.2rem); }
+  .price { font-size: 1.4rem; font-weight: 800; color: var(--accent-ink); margin: 0 0 12px; }
+  .info { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin: 16px 0 20px; }
+  .prices, .related { margin-top: 48px; }
+  .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); max-height: 480px; overflow-y: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  th { position: sticky; top: 0; background: var(--surface); }
+  td:last-child, th:last-child { text-align: right; white-space: nowrap; }
+</style>

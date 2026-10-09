@@ -1,0 +1,68 @@
+---
+import Base from "../layouts/Base.astro";
+import ProductCard from "../components/ProductCard.astro";
+import OrderSteps from "../components/OrderSteps.astro";
+import BuyButtons from "../components/BuyButtons.astro";
+import { categories, featuredProducts, products } from "../lib/products";
+---
+<Base>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <p class="eyebrow">Quét là nghe</p>
+        <h1>Món quà có cả bài hát bạn thương</h1>
+        <p class="lead">Móc khoá NFC, card Spotify, postcard và poster in theo hình, tên và bài hát của riêng bạn. Chạm điện thoại hoặc quét mã là phát nhạc ngay.</p>
+        <div class="cta">
+          <a class="btn primary" href="/san-pham/">Xem sản phẩm</a>
+          <a class="btn" href="/cach-dat-hang/">Cách đặt hàng</a>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true"><div class="vinyl"></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head"><h2>Được đặt nhiều nhất</h2><a href="/san-pham/">Xem tất cả {products.length} sản phẩm →</a></div>
+      <div class="grid">
+        {featuredProducts.map((p, i) => <ProductCard product={p} seed={i} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <h2>Danh mục</h2>
+      <div class="cats">
+        {categories.map((c) => <a class="cat" href={`/san-pham/#${c.slug}`}>{c.name}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Đặt hàng thế nào?</h2>
+      <OrderSteps />
+      <div class="after"><BuyButtons /></div>
+    </div>
+  </section>
+</Base>
+<style>
+  .hero { padding: 48px 0 24px; }
+  .hero-in { display: grid; gap: 32px; align-items: center; grid-template-columns: 1.2fr 1fr; }
+  .eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 700; color: var(--accent-ink); }
+  h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin: 8px 0 16px; }
+  .lead { font-size: 1.1rem; color: var(--muted); max-width: 34em; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .art { display: grid; place-items: center; }
+  .vinyl { width: min(100%, 340px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, var(--bg) 0 3%, var(--accent) 3.5% 22%, var(--ink) 23% 30%, #3b312d 31% 32%, var(--ink) 33% 45%, #3b312d 46% 47%, var(--ink) 48% 70%); box-shadow: 0 20px 50px rgb(43 35 32 / .25); animation: spin 12s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .vinyl { animation: none; } }
+  @media (max-width: 720px) { .hero-in { grid-template-columns: 1fr; } .art { order: -1; } .vinyl { width: 200px; } }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .head h2 { margin: 0; }
+  .alt { background: var(--soft); }
+  .cats { display: flex; flex-wrap: wrap; gap: 10px; }
+  .cat { background: var(--surface); color: var(--ink); text-decoration: none; padding: 10px 16px; border-radius: 999px; font-weight: 600; border: 1px solid var(--line); }
+  .after { margin-top: 24px; }
+</style>

@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../site";
+const socials = Object.entries(site.socials).filter(([, url]) => url);
+---
+<Base title="Liên hệ" description="Liên hệ tiệm Catsette.">
+  <div class="wrap section narrow">
+    <h1>Về Catsette</h1>
+    <p>Catsette là tiệm nhỏ làm quà âm nhạc: móc khoá NFC, card Spotify, postcard, poster và sticker kèm mã nhạc quét được. Phần lớn sản phẩm được in riêng theo hình, tên và bài hát khách gửi.</p>
+    <h2>Liên hệ</h2>
+    <ul class="contacts">
+      <li><a href={site.shopeeUrl} target="_blank" rel="noopener">Shopee: tiemcatsette</a></li>
+      {site.zaloUrl && <li><a href={site.zaloUrl} target="_blank" rel="noopener">Zalo</a></li>}
+      {socials.map(([name, url]) => <li><a href={url} target="_blank" rel="noopener">{name[0].toUpperCase() + name.slice(1)}</a></li>)}
+    </ul>
+  </div>
+</Base>
+<style>
+  .narrow { max-width: 760px; }
+  .contacts { padding-left: 20px; }
+  .contacts li { margin-bottom: 6px; }
+</style>

@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import OrderSteps from "../components/OrderSteps.astro";
+import BuyButtons from "../components/BuyButtons.astro";
+---
+<Base title="Cách đặt hàng" description="Cách đặt hàng sản phẩm Catsette làm theo yêu cầu.">
+  <div class="wrap section narrow">
+    <h1>Cách đặt hàng</h1>
+    <OrderSteps />
+    <h2>Cần chuẩn bị gì?</h2>
+    <ul>
+      <li><strong>Hình ảnh</strong> bạn muốn in (ảnh rõ nét, càng to càng tốt).</li>
+      <li><strong>Tên bài hát và nghệ sĩ</strong>, hoặc link Spotify / Apple Music của bài hát.</li>
+      <li><strong>Chữ muốn in</strong> (tên, lời nhắn, ngày kỷ niệm) nếu mẫu có.</li>
+    </ul>
+    <h2>Mã Spotify và NFC khác nhau thế nào?</h2>
+    <p><strong>Mã Spotify</strong> là dải sóng in trên sản phẩm, mở app Spotify và quét bằng camera là phát bài hát. <strong>NFC</strong> là chip gắn bên trong, chỉ cần chạm điện thoại vào là mở bài hát, dùng được cả Spotify lẫn Apple Music.</p>
+    <BuyButtons />
+  </div>
+</Base>
+<style>
+  .narrow { max-width: 760px; }
+  h2 { margin-top: 40px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  p { margin-bottom: 24px; }
+</style>

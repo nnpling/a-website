@@ -1,0 +1,30 @@
+---
+import Base from "../../layouts/Base.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import { categories, products } from "../../lib/products";
+const groups = categories.map((c) => ({
+  ...c,
+  items: products.filter((p) => p.categorySlug === c.slug).sort((a, b) => (a.type === b.type ? 0 : a.type === "custom" ? -1 : 1)),
+}));
+---
+<Base title="Sản phẩm" description="Tất cả sản phẩm Catsette: móc khoá NFC, card Spotify, postcard, poster, sticker, bookmark.">
+  <div class="wrap section">
+    <h1>Sản phẩm</h1>
+    <p class="muted">Giá theo từng mẫu và kích thước. Bấm vào sản phẩm để xem bảng giá chi tiết.</p>
+    <nav class="chips" aria-label="Danh mục">
+      {groups.map((g) => <a href={`#${g.slug}`}>{g.name} <span>{g.items.length}</span></a>)}
+    </nav>
+    {groups.map((g) => (
+      <section id={g.slug} class="group">
+        <h2>{g.name}</h2>
+        <div class="grid">{g.items.map((p, i) => <ProductCard product={p} seed={i} />)}</div>
+      </section>
+    ))}
+  </div>
+</Base>
+<style>
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+  .chips a { background: var(--surface); border: 1px solid var(--line); color: var(--ink); text-decoration: none; padding: 6px 12px; border-radius: 999px; font-size: .9rem; }
+  .chips span { color: var(--muted); }
+  .group { padding-top: 32px; scroll-margin-top: 80px; }
+</style>
