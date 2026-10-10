@@ -3,9 +3,59 @@
   "shortName": "Card NFC custom 2 mặt",
   "categorySlug": "card-nfc",
   "type": "custom",
+  "images": [
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/anh-1.webp",
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/anh-2.webp",
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/anh-3.webp",
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/anh-4.webp",
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/anh-5.webp",
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/anh-6.webp",
+    "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/cach-dat.webp"
+  ],
+  "optionImages": [
+    {
+      "option": "Ảnh",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-anh.webp"
+    },
+    {
+      "option": "Lyric nền gradient",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-lyric-nen-gradient.webp"
+    },
+    {
+      "option": "Lyric nền trơn",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-lyric-nen-tron.webp"
+    },
+    {
+      "option": "Playing nền trắng",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-playing-nen-trang.webp"
+    },
+    {
+      "option": "Playing nền đen",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-playing-nen-den.webp"
+    },
+    {
+      "option": "Polaroid chanh vàng",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-polaroid-chanh-vang.webp"
+    },
+    {
+      "option": "Polaroid nơ",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-polaroid-no.webp"
+    },
+    {
+      "option": "Polaroid hoa hồng",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-polaroid-hoa-hong.webp"
+    },
+    {
+      "option": "Polaroid trắng",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-polaroid-trang.webp"
+    },
+    {
+      "option": "Polaroid đen",
+      "image": "/images/card-nfc-spotify-apple-music-custom-2-mat-hinh/phan-loai-polaroid-den.webp"
+    }
+  ],
   "order": 13,
   "featured": 3,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "option1Name": "",

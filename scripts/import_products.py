@@ -18,7 +18,14 @@ import openpyxl
 OUT = Path(__file__).resolve().parent.parent / "src" / "data" / "products"
 
 # Các ô chỉ sửa trên web, chạy lại script không ghi đè.
-KEEP = ("shortName", "order", "featured", "image", "shopeeUrl", "option1Name", "option2Name")
+KEEP = ("shortName", "order", "featured", "images", "optionImages", "shopeeUrl", "option1Name", "option2Name")
+
+# Sản phẩm đã gỡ khỏi web, chạy lại script không tạo lại.
+REMOVED = {
+    "the-in-theo-yeu-cau-kem-spotify-hinh-anh-tu-chon",  # trùng card 2 mặt custom
+    "khung-anh-nam-cham-trong-suot-dung-polaroid-size",  # ngừng bán
+    "card-lyric-mini-2-mat-kem-ma-spotify-taylor-swift",  # ngừng bán
+}
 
 CATEGORY_SLUGS = {
     "NFC Keychain": "moc-khoa-nfc",
@@ -110,6 +117,7 @@ def main(path):
             p["note"] = None
 
     OUT.mkdir(parents=True, exist_ok=True)
+    products = [p for p in products if p["slug"] not in REMOVED]
     for i, p in enumerate(products, 1):
         path = OUT / f"{p['slug']}.json"
         old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
@@ -119,13 +127,15 @@ def main(path):
             "categorySlug": p["categorySlug"],
             "type": p["type"],
             "order": i,
-            "image": "",
+            "images": [],
             "shopeeUrl": "",
             "note": p["note"] or "",
             "option1Name": "",
             "option2Name": "",
         }
         data.update({k: old[k] for k in KEEP if k in old})
+        if old.get("image") and not data["images"]:
+            data["images"] = [old["image"]]
         if p["type"] == "ready":
             data.update(priceMin=p["priceMin"], priceMax=p["priceMax"], variantCount=p["variantCount"])
         data["variants"] = [

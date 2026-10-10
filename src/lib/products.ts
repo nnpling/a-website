@@ -9,7 +9,10 @@ type ProductFile = {
   type: "ready" | "custom";
   order?: number | null;
   featured?: number | null;
-  image?: string;
+  images?: string[];
+  // Ảnh riêng của từng phân loại, hiện khi khách bấm chọn phân loại đó.
+  optionImages?: { option?: string; image?: string }[];
+  image?: string; // kiểu cũ (1 ảnh), vẫn đọc được
   shopeeUrl?: string;
   note?: string;
   // Chỉ dùng cho hàng có sẵn không có bảng phân loại.
@@ -39,7 +42,9 @@ export type Product = {
   variants: Variant[];
   optionGroups: OptionGroup[];
   featured?: number;
-  image?: string;
+  image?: string; // ảnh đại diện = ảnh đầu tiên
+  images: string[];
+  optionImages: Record<string, string>;
   shopeeUrl: string;
 };
 
@@ -59,6 +64,10 @@ function buildOptionGroups(variants: Variant[], names: string[]): OptionGroup[] 
 }
 
 function toProduct(path: string, p: ProductFile): Product {
+  const images = (p.images ?? [p.image]).filter((s): s is string => !!s);
+  const optionImages = Object.fromEntries(
+    (p.optionImages ?? []).filter((o) => o.option?.trim() && o.image).map((o) => [o.option!.trim(), o.image!]),
+  );
   const slug = path.split("/").pop()!.replace(/\.json$/, "");
   const variants: Variant[] = (p.variants ?? [])
     .map((v) => {
@@ -82,7 +91,9 @@ function toProduct(path: string, p: ProductFile): Product {
     variants,
     optionGroups: buildOptionGroups(variants, [p.option1Name ?? "", p.option2Name ?? ""]),
     featured: num(p.featured) ?? undefined,
-    image: p.image || undefined,
+    image: images[0],
+    images,
+    optionImages,
     shopeeUrl: p.shopeeUrl || site.shopeeUrl,
   };
 }

@@ -3,9 +3,42 @@
   "shortName": "Móc khoá NFC Spotify / Apple Music custom",
   "categorySlug": "moc-khoa-nfc",
   "type": "custom",
+  "images": [
+    "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/anh-1.webp",
+    "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/anh-2.webp",
+    "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/anh-3.webp",
+    "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/anh-4.webp",
+    "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/anh-5.webp",
+    "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/anh-6.webp"
+  ],
+  "optionImages": [
+    {
+      "option": "Khung tròn đĩa CD",
+      "image": "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/phan-loai-khung-tron-dia-cd.webp"
+    },
+    {
+      "option": "Khung vuông đĩa CD",
+      "image": "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/phan-loai-khung-vuong-dia-cd.webp"
+    },
+    {
+      "option": "Khung tròn full ảnh",
+      "image": "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/phan-loai-khung-tron-full-anh.webp"
+    },
+    {
+      "option": "Khung vuông full ảnh",
+      "image": "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/phan-loai-khung-vuong-full-anh.webp"
+    },
+    {
+      "option": "Khung tròn đĩa than",
+      "image": "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/phan-loai-khung-tron-dia-than.webp"
+    },
+    {
+      "option": "Khung vuông đĩa than",
+      "image": "/images/moc-khoa-spotify-apple-music-nfc-custom-in-theo/phan-loai-khung-vuong-dia-than.webp"
+    }
+  ],
   "order": 14,
   "featured": 1,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "option1Name": "Khung + Ảnh",

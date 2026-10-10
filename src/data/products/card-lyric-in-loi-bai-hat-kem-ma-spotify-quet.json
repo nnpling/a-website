@@ -3,9 +3,13 @@
   "shortName": "Lyric card Taylor Swift",
   "categorySlug": "lyric-card",
   "type": "ready",
+  "images": [
+    "/images/card-lyric-in-loi-bai-hat-kem-ma-spotify-quet/anh-1.webp",
+    "/images/card-lyric-in-loi-bai-hat-kem-ma-spotify-quet/anh-2.webp",
+    "/images/card-lyric-in-loi-bai-hat-kem-ma-spotify-quet/anh-3.webp"
+  ],
   "order": 2,
   "featured": 6,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "priceMin": 15000,

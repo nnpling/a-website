@@ -3,9 +3,13 @@
   "shortName": "Postcard custom kèm mã Spotify",
   "categorySlug": "postcard",
   "type": "custom",
+  "images": [
+    "/images/postcard-custom-kem-ma-spotify-bai-hat-cho-cac/anh-1.webp",
+    "/images/postcard-custom-kem-ma-spotify-bai-hat-cho-cac/anh-2.webp",
+    "/images/postcard-custom-kem-ma-spotify-bai-hat-cho-cac/anh-3.webp"
+  ],
   "order": 19,
   "featured": 5,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "option1Name": "",

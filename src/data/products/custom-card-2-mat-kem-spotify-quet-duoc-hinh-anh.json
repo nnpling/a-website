@@ -3,9 +3,66 @@
   "shortName": "Card 2 mặt custom kèm mã Spotify",
   "categorySlug": "photo-card",
   "type": "custom",
+  "images": [
+    "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/anh-1.webp",
+    "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/anh-2.webp",
+    "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/anh-3.webp",
+    "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/anh-4.webp",
+    "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/anh-5.webp",
+    "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/mat-sau.webp"
+  ],
+  "optionImages": [
+    {
+      "option": "Code màu, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-code-mau-85x54.webp"
+    },
+    {
+      "option": "Ko tên trắng 65x54 S",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ko-ten-trang-65x54-s.webp"
+    },
+    {
+      "option": "Ko tên trắng, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ko-ten-trang-85x54.webp"
+    },
+    {
+      "option": "Ko tên đen, 65x54 S",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ko-ten-den-65x54-s.webp"
+    },
+    {
+      "option": "Ko tên đen, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ko-ten-den-85x54.webp"
+    },
+    {
+      "option": "Lyric, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-lyric-85x54.webp"
+    },
+    {
+      "option": "Playing trắng, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-playing-trang-85x54.webp"
+    },
+    {
+      "option": "Playing đen, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-playing-den-85x54.webp"
+    },
+    {
+      "option": "Tên nền trắng, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ten-nen-trang-85x54.webp"
+    },
+    {
+      "option": "Tên nền trắng, 85x65",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ten-nen-trang-85x65.webp"
+    },
+    {
+      "option": "Tên nền đen, 85x54",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ten-nen-den-85x54.webp"
+    },
+    {
+      "option": "Tên nền đen, 85x65",
+      "image": "/images/custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh/phan-loai-ten-nen-den-85x65.webp"
+    }
+  ],
   "order": 15,
   "featured": 2,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "option1Name": "",

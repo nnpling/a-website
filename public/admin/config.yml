@@ -104,7 +104,18 @@ collections:
         options:
           - { label: Làm theo yêu cầu, value: custom }
           - { label: Có sẵn, value: ready }
-      - { name: image, label: Ảnh sản phẩm, widget: image, required: false, hint: "Để trống thì hiện ảnh tạm." }
+      - { name: images, label: Ảnh sản phẩm, widget: image, multiple: true, required: false, hint: "Ảnh showcase, ảnh đầu tiên là ảnh đại diện. Kéo để đổi thứ tự. Để trống thì hiện ảnh tạm." }
+      - name: optionImages
+        label: Ảnh theo phân loại
+        label_singular: ảnh phân loại
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.option}}"
+        hint: "Ảnh chỉ hiện khi khách bấm chọn phân loại đó. Tên phân loại phải gõ giống hệt trong bảng Phân loại và giá."
+        fields:
+          - { name: option, label: Tên phân loại }
+          - { name: image, label: Ảnh, widget: image }
       - { name: shopeeUrl, label: Link Shopee riêng, required: false, hint: "Link listing của sản phẩm này. Để trống thì nút Mua dẫn về trang shop." }
       - { name: featured, label: Hiện ở trang chủ, widget: number, value_type: int, min: 1, required: false, hint: "Điền 1, 2, 3... để hiện ở trang chủ (số nhỏ hiện trước). Để trống thì không hiện." }
       - { name: order, label: Thứ tự trong danh sách, widget: number, value_type: int, required: false, hint: "Số nhỏ hiện trước." }

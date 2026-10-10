@@ -3,8 +3,13 @@
   "shortName": "Spotify card K-pop",
   "categorySlug": "photo-card",
   "type": "ready",
+  "images": [
+    "/images/the-spotify-card-kpop-quet-duoc-hinh-nghe-si/anh-1.webp",
+    "/images/the-spotify-card-kpop-quet-duoc-hinh-nghe-si/anh-2.webp",
+    "/images/the-spotify-card-kpop-quet-duoc-hinh-nghe-si/anh-3.webp",
+    "/images/the-spotify-card-kpop-quet-duoc-hinh-nghe-si/anh-4.webp"
+  ],
   "order": 4,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "priceMin": 15000,

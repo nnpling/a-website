@@ -3,8 +3,12 @@
   "shortName": "Spotify card US-UK",
   "categorySlug": "photo-card",
   "type": "ready",
+  "images": [
+    "/images/the-spotify-card-us-uk-quet-duoc-hinh-nghe-si/anh-1.webp",
+    "/images/the-spotify-card-us-uk-quet-duoc-hinh-nghe-si/anh-2.webp",
+    "/images/the-spotify-card-us-uk-quet-duoc-hinh-nghe-si/anh-3.webp"
+  ],
   "order": 5,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "priceMin": 15000,

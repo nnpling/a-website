@@ -52,7 +52,8 @@
       const allHi = all.length ? Math.max(...all) : hi;
       const name = d.shortName || d.name || "(chưa có tên)";
       const cat = categories[d.categorySlug] || "";
-      const img = d.image ? String(getAsset(d.image)) : null;
+      const first = (d.images || []).find(Boolean) || d.image;
+      const img = first ? String(getAsset(first)) : null;
       const custom = d.type !== "ready";
       const image = img ? h("img", { src: img, alt: "" }) : h(Placeholder, { label: cat });
 

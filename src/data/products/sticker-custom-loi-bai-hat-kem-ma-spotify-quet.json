@@ -3,8 +3,11 @@
   "shortName": "Sticker lời bài hát custom",
   "categorySlug": "sticker",
   "type": "custom",
+  "images": [
+    "/images/sticker-custom-loi-bai-hat-kem-ma-spotify-quet/anh-1.webp",
+    "/images/sticker-custom-loi-bai-hat-kem-ma-spotify-quet/anh-2.webp"
+  ],
   "order": 24,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "option1Name": "",

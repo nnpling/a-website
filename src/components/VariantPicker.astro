@@ -12,7 +12,9 @@ const data = product.variants.map((v) => ({ o: v.options, p: v.price }));
       <span class="label">{g.name}</span>
       <div class="opts" role="group" aria-label={g.name}>
         {g.values.map((v) => (
-          <button type="button" class="opt" data-group={gi} data-value={v} aria-pressed="false">{v}</button>
+          <button type="button" class="opt" data-group={gi} data-value={v} data-image={product.optionImages[v]} aria-pressed="false">
+            {product.optionImages[v] && <img src={product.optionImages[v]} alt="" loading="lazy" />}{v}
+          </button>
         ))}
       </div>
     </div>
@@ -52,12 +54,27 @@ const data = product.variants.map((v) => ({ o: v.options, p: v.price }));
       hint.hidden = done;
     }
 
+    // Báo khung ảnh (ProductGallery) đổi sang ảnh của phân loại vừa chọn.
+    const showImage = (src: string | null) =>
+      document.dispatchEvent(new CustomEvent("option-image", { detail: src }));
+    let lastImage: string | null = null;
+
     for (const b of buttons) {
       b.addEventListener("click", () => {
         const gi = Number(b.dataset.group);
         picked[gi] = picked[gi] === b.dataset.value ? null : b.dataset.value!;
+        if (b.dataset.image) {
+          // Bỏ chọn thì quay về ảnh của phân loại khác còn đang chọn (nếu có).
+          const still = buttons.find((o) => o.dataset.image && picked[Number(o.dataset.group)] === o.dataset.value);
+          lastImage = picked[gi] ? b.dataset.image : still?.dataset.image ?? null;
+          showImage(lastImage);
+        }
         render();
       });
+      if (b.dataset.image) {
+        b.addEventListener("mouseenter", () => !b.disabled && showImage(b.dataset.image!));
+        b.addEventListener("mouseleave", () => showImage(lastImage));
+      }
     }
     render();
   });
@@ -68,7 +85,8 @@ const data = product.variants.map((v) => ({ o: v.options, p: v.price }));
   .row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; margin-bottom: 16px; align-items: start; }
   .label { color: var(--muted); font-size: .95rem; padding-top: 8px; }
   .opts { display: flex; flex-wrap: wrap; gap: 8px; }
-  .opt { font: inherit; font-size: .9rem; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 7px 12px; cursor: pointer; text-align: left; }
+  .opt { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: .9rem; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 7px 12px; cursor: pointer; text-align: left; }
+  .opt img { width: 28px; height: 28px; object-fit: cover; border-radius: 3px; margin: -3px 0 -3px -6px; }
   .opt:hover:not(:disabled) { border-color: var(--accent); color: var(--accent-ink); }
   .opt[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-ink); background: var(--soft); font-weight: 600; }
   .opt:disabled { opacity: .4; cursor: not-allowed; text-decoration: line-through; }
