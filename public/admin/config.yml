@@ -76,12 +76,26 @@ collections:
     identifier_field: shortName
     # Tên file = đường dẫn trên web (/san-pham/ten-file). Đổi tên ngắn sau này không đổi đường dẫn.
     slug: "{{shortName}}"
-    summary: "{{shortName}}"
-    sortable_fields: [order, shortName, categorySlug]
+    description: "Bấm vào sản phẩm để sửa. Muốn tạm ẩn sản phẩm khỏi web thì bật ô \"Ẩn khỏi web\" rồi Lưu. Dùng nút Lọc để xem riêng sản phẩm đang hiện hoặc đang ẩn."
+    summary: "{{hidden | ternary('🙈 Đang ẩn · ', '')}}{{shortName}}"
+    thumbnail: images.0
+    sortable_fields:
+      fields: [order, shortName, categorySlug]
+      default: { field: order }
+    view_filters:
+      filters:
+        - { name: visible, label: Đang hiện, field: hidden, ne: true }
+        - { name: hidden, label: Đang ẩn, field: hidden, eq: true }
+        - { name: custom, label: Làm theo yêu cầu, field: type, eq: custom }
+        - { name: ready, label: Có sẵn, field: type, eq: ready }
+        - { name: featured, label: Hiện ở trang chủ, field: featured, gte: 1 }
     view_groups:
-      - { label: Danh mục, field: categorySlug }
-      - { label: Loại hàng, field: type }
+      groups:
+        - { name: category, label: Danh mục, field: categorySlug }
+        - { name: status, label: Ẩn / hiện, field: hidden }
+        - { name: type, label: Loại hàng, field: type }
     fields:
+      - { name: hidden, label: Ẩn khỏi web, widget: boolean, default: false, required: false, hint: "Bật lên thì sản phẩm biến mất khỏi web (trang chủ, danh sách và trang riêng của nó). Tắt đi là hiện lại." }
       - { name: shortName, label: Tên ngắn, hint: "Tên hiện trên thẻ sản phẩm và tiêu đề trang." }
       - { name: name, label: Tên đầy đủ, widget: text, hint: "Tên dài như trên Shopee." }
       - name: categorySlug

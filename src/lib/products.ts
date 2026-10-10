@@ -7,6 +7,8 @@ type ProductFile = {
   shortName?: string;
   categorySlug: string;
   type: "ready" | "custom";
+  // Bật trong /admin để tạm ẩn sản phẩm khỏi web.
+  hidden?: boolean;
   order?: number | null;
   featured?: number | null;
   images?: string[];
@@ -99,6 +101,7 @@ function toProduct(path: string, p: ProductFile): Product {
 }
 
 export const products: Product[] = Object.entries(files)
+  .filter(([, p]) => !p.hidden)
   .map(([path, p]) => ({ order: num(p.order) ?? Infinity, product: toProduct(path, p) }))
   .sort((a, b) => a.order - b.order || a.product.slug.localeCompare(b.product.slug))
   .map((x) => x.product);
