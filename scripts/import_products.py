@@ -20,6 +20,9 @@ OUT = Path(__file__).resolve().parent.parent / "src" / "data" / "products"
 # Các ô chỉ sửa trên web, chạy lại script không ghi đè.
 KEEP = ("shortName", "order", "featured", "images", "optionImages", "shopeeUrl", "option1Name", "option2Name")
 
+# Sản phẩm đã gỡ khỏi web (trùng với sản phẩm khác), chạy lại script không tạo lại.
+REMOVED = {"the-in-theo-yeu-cau-kem-spotify-hinh-anh-tu-chon"}
+
 CATEGORY_SLUGS = {
     "NFC Keychain": "moc-khoa-nfc",
     "NFC Card": "card-nfc",
@@ -110,6 +113,7 @@ def main(path):
             p["note"] = None
 
     OUT.mkdir(parents=True, exist_ok=True)
+    products = [p for p in products if p["slug"] not in REMOVED]
     for i, p in enumerate(products, 1):
         path = OUT / f"{p['slug']}.json"
         old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
