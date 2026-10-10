@@ -29,3 +29,4 @@ h1 { margin: 12px 0 8px; font-size: 1.6rem; line-height: 1.25; }
 .cat { margin: 0; font-size: .8rem; color: var(--muted); }
 .cname { margin: 2px 0 6px; font-weight: 600; line-height: 1.35; }
 .cprice { margin: 0; font-weight: 800; color: var(--accent-ink); }
+.hidden-note { margin: 0 0 20px; padding: 10px 14px; border-radius: 10px; background: #fff3cd; color: #7a5a00; font-weight: 600; }

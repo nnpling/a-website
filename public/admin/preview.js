@@ -58,6 +58,7 @@
       const image = img ? h("img", { src: img, alt: "" }) : h(Placeholder, { label: cat });
 
       return h("div", { className: "page" },
+        d.hidden ? h("p", { className: "hidden-note" }, "Sản phẩm này đang ẩn, khách không thấy trên web.") : null,
         h("p", { className: "section" }, "Trang sản phẩm"),
         h("div", { className: "layout" },
           h("div", { className: "media" }, image),
