@@ -3,7 +3,11 @@
   "shortName": "Spotify card V-pop",
   "categorySlug": "photo-card",
   "type": "ready",
-  "images": [],
+  "images": [
+    "/images/the-spotify-card-vpop-quet-duoc-hinh-nghe-si/anh-1.webp",
+    "/images/the-spotify-card-vpop-quet-duoc-hinh-nghe-si/anh-2.webp",
+    "/images/the-spotify-card-vpop-quet-duoc-hinh-nghe-si/anh-3.webp"
+  ],
   "order": 6,
   "shopeeUrl": "",
   "note": "",
