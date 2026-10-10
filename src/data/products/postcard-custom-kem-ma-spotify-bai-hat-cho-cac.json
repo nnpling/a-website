@@ -1,0 +1,195 @@
+{
+  "name": "[Custom] Postcard custom kèm mã Spotify bài hát cho các dịp 20/10, 8/3, Valentine đơn giản nhiều size",
+  "shortName": "Postcard custom kèm mã Spotify",
+  "categorySlug": "postcard",
+  "type": "custom",
+  "order": 19,
+  "featured": 5,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "Most played song (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Custom lời nhắn (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Most played song (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "HPBD I'm feeling (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Strong & loved (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Custom lời nhắn (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "The damn season (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "You made it (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "I'm your big fan (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Most played song (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "You made it (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Custom lời nhắn (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "The damn season (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "HPBD I'm feeling (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "You made it (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "HPBD I'm feeling (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Most played song (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "I'm your big fan (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Custom lời nhắn (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "The damn season (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Favorite human (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "HPBD You feel (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Strong & loved (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "You made it (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Favorite human (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "HPBD You feel (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "I'm your big fan (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "HPBD You feel (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "HPBD You feel (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Favorite human (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "The damn season (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Strong & loved (S)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "HPBD I'm feeling (M)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "I'm your big fan (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Strong & loved (M)",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Favorite human (S)",
+      "option2": "Không bao thư",
+      "price": 20000
+    }
+  ]
+}

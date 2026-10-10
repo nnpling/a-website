@@ -1,0 +1,17 @@
+{
+  "name": "Catsette",
+  "tagline": "Quà âm nhạc in mã Spotify & NFC, làm theo ý bạn",
+  "description": "Catsette làm móc khoá NFC, card Spotify, postcard, poster và sticker kèm mã nhạc quét được. Gửi hình, tên và bài hát, tiệm in riêng cho bạn.",
+  "shopeeUrl": "https://shopee.vn/tiemcatsette",
+  "zaloUrl": "",
+  "leadTime": {
+    "custom": "Hàng đặt trước (có hàng sau 6 ngày)",
+    "ready": "Hàng có sẵn"
+  },
+  "warranty": "Nếu sản phẩm lỗi chip, hỏng hoặc sai yêu cầu, vui lòng gửi ảnh/clip trong vòng 3 ngày từ khi nhận hàng để mình hỗ trợ làm lại miễn phí.",
+  "socials": {
+    "facebook": "",
+    "instagram": "",
+    "tiktok": ""
+  }
+}

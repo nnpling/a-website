@@ -1,0 +1,128 @@
+# Cấu hình trang quản lý /admin (Sveltia CMS).
+# Mỗi lần bấm Lưu, CMS commit thẳng vào nhánh main, Vercel tự build lại web sau khoảng 1 phút.
+backend:
+  name: github
+  repo: nnpling/a-website
+  branch: main
+  # Đăng nhập bằng GitHub token (không cần dựng server OAuth).
+  auth_methods: [token]
+  commit_messages:
+    create: "CMS: thêm {{collection}} {{slug}}"
+    update: "CMS: sửa {{collection}} {{slug}}"
+    delete: "CMS: xoá {{collection}} {{slug}}"
+    uploadMedia: "CMS: tải ảnh {{path}}"
+    deleteMedia: "CMS: xoá ảnh {{path}}"
+
+app_title: Quản lý Catsette
+site_url: https://www.tiemcatsette.com
+display_url: https://www.tiemcatsette.com
+show_preview_links: false
+
+media_folder: public/images
+public_folder: /images
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      # Ảnh chụp điện thoại được thu nhỏ và đổi sang webp trước khi lưu cho web nhẹ.
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 1600
+          height: 1600
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  maxlength: 50
+
+singletons:
+  - name: site
+    label: Thông tin tiệm
+    file: src/data/site.json
+    format: json
+    fields:
+      - { name: name, label: Tên tiệm }
+      - { name: tagline, label: Câu giới thiệu ngắn, hint: "Hiện ở chân trang và tiêu đề trang chủ." }
+      - { name: description, label: Mô tả web, widget: text, hint: "Hiện khi web được chia sẻ hoặc tìm thấy trên Google." }
+      - { name: shopeeUrl, label: Link shop Shopee }
+      - { name: zaloUrl, label: Link Zalo, required: false, hint: "Ví dụ https://zalo.me/0901234567. Để trống thì nút Zalo bị ẩn." }
+      - name: leadTime
+        label: Thời gian làm hàng (mục Vận chuyển)
+        widget: object
+        fields:
+          - { name: custom, label: Hàng làm theo yêu cầu }
+          - { name: ready, label: Hàng có sẵn }
+      - { name: warranty, label: Chế độ bảo hành, widget: text }
+      - name: socials
+        label: Mạng xã hội
+        widget: object
+        hint: Để trống ô nào thì link đó không hiện.
+        fields:
+          - { name: facebook, label: Facebook, required: false }
+          - { name: instagram, label: Instagram, required: false }
+          - { name: tiktok, label: TikTok, required: false }
+
+collections:
+  - name: products
+    label: Sản phẩm
+    label_singular: sản phẩm
+    folder: src/data/products
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: shortName
+    # Tên file = đường dẫn trên web (/san-pham/ten-file). Đổi tên ngắn sau này không đổi đường dẫn.
+    slug: "{{shortName}}"
+    summary: "{{shortName}}"
+    sortable_fields: [order, shortName, categorySlug]
+    view_groups:
+      - { label: Danh mục, field: categorySlug }
+      - { label: Loại hàng, field: type }
+    fields:
+      - { name: shortName, label: Tên ngắn, hint: "Tên hiện trên thẻ sản phẩm và tiêu đề trang." }
+      - { name: name, label: Tên đầy đủ, widget: text, hint: "Tên dài như trên Shopee." }
+      - name: categorySlug
+        label: Danh mục
+        widget: select
+        options:
+          - { label: Móc khoá NFC, value: moc-khoa-nfc }
+          - { label: Card Spotify, value: photo-card }
+          - { label: Card NFC, value: card-nfc }
+          - { label: Lyric card, value: lyric-card }
+          - { label: Postcard, value: postcard }
+          - { label: Poster, value: poster }
+          - { label: Sticker, value: sticker }
+          - { label: Bookmark, value: bookmark }
+          - { label: Phụ kiện, value: phu-kien }
+      - name: type
+        label: Loại hàng
+        widget: select
+        default: custom
+        options:
+          - { label: Làm theo yêu cầu, value: custom }
+          - { label: Có sẵn, value: ready }
+      - { name: image, label: Ảnh sản phẩm, widget: image, required: false, hint: "Để trống thì hiện ảnh tạm." }
+      - { name: shopeeUrl, label: Link Shopee riêng, required: false, hint: "Link listing của sản phẩm này. Để trống thì nút Mua dẫn về trang shop." }
+      - { name: featured, label: Hiện ở trang chủ, widget: number, value_type: int, min: 1, required: false, hint: "Điền 1, 2, 3... để hiện ở trang chủ (số nhỏ hiện trước). Để trống thì không hiện." }
+      - { name: order, label: Thứ tự trong danh sách, widget: number, value_type: int, required: false, hint: "Số nhỏ hiện trước." }
+      - { name: note, label: Ghi chú, required: false, hint: "Ví dụ: Giá khác nhau theo size." }
+      - { name: option1Name, label: Tên nhóm phân loại 1, required: false, hint: "Giống Shopee, ví dụ: Khung + Ảnh. Để trống thì hiện 'Mẫu'." }
+      - { name: option2Name, label: Tên nhóm phân loại 2, required: false, hint: "Ví dụ: Thêm + Mặt in. Để trống thì hiện 'Tuỳ chọn'." }
+      - name: variants
+        label: Phân loại và giá
+        label_singular: phân loại
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.option1}} / {{fields.option2}}: {{fields.price}}đ"
+        hint: "Mỗi dòng là một tổ hợp phân loại kèm giá, giống bảng phân loại trên Shopee. Giá thấp nhất và cao nhất trên web tự tính từ bảng này."
+        fields:
+          - { name: option1, label: Phân loại 1 }
+          - { name: option2, label: Phân loại 2, required: false }
+          - { name: price, label: Giá (đồng), widget: number, value_type: int, min: 0 }
+      - { name: priceMin, label: Giá thấp nhất (đồng), widget: number, value_type: int, required: false, hint: "Chỉ dùng khi bảng phân loại để trống (hàng có sẵn)." }
+      - { name: priceMax, label: Giá cao nhất (đồng), widget: number, value_type: int, required: false, hint: "Chỉ dùng khi bảng phân loại để trống." }
+      - { name: variantCount, label: Số mẫu, widget: number, value_type: int, required: false, hint: "Chỉ dùng khi bảng phân loại để trống, hiện thành 'Có N mẫu để chọn'." }

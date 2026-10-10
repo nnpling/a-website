@@ -1,0 +1,34 @@
+{
+  "name": "Custom sticker đính mã Spotify album hoặc bài hát KÈM TÊN 9 x 6.5 cm trang trí tường, phòng ngủ, bullet journal",
+  "shortName": "Sticker custom kèm tên + mã Spotify",
+  "categorySlug": "sticker",
+  "type": "custom",
+  "order": 23,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "Set 4 sticker",
+      "option2": "Trắng",
+      "price": 30000
+    },
+    {
+      "option1": "Set 4 sticker",
+      "option2": "Đen",
+      "price": 30000
+    },
+    {
+      "option1": "Lẻ 1 sticker",
+      "option2": "Trắng",
+      "price": 20000
+    },
+    {
+      "option1": "Lẻ 1 sticker",
+      "option2": "Đen",
+      "price": 20000
+    }
+  ]
+}

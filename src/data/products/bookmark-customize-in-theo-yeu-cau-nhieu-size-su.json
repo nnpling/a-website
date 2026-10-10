@@ -1,0 +1,214 @@
+{
+  "name": "Bookmark customize in theo yêu cầu (nhiều size) sử dụng đánh dấu trang, làm quà tặng, trang trí ✨",
+  "shortName": "Bookmark custom theo yêu cầu",
+  "categorySlug": "bookmark",
+  "type": "custom",
+  "order": 12,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "Text bên trên (L)",
+      "option2": "Đen không dây",
+      "price": 21000
+    },
+    {
+      "option1": "Text bên dưới (M)",
+      "option2": "Trắng kèm dây",
+      "price": 23000
+    },
+    {
+      "option1": "Text bên trên (L)",
+      "option2": "Trắng kèm dây",
+      "price": 24000
+    },
+    {
+      "option1": "Text + ngày (L)",
+      "option2": "Đen không dây",
+      "price": 21000
+    },
+    {
+      "option1": "Text + ngày (M)",
+      "option2": "Đen không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Trơn (M)",
+      "option2": "Trắng kèm dây",
+      "price": 25000
+    },
+    {
+      "option1": "Text bên dưới (M)",
+      "option2": "Trắng không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Text bên trên (M)",
+      "option2": "Trắng không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Text + ngày (M)",
+      "option2": "Đen kèm dây",
+      "price": 22000
+    },
+    {
+      "option1": "Text bên dưới (L)",
+      "option2": "Đen không dây",
+      "price": 21000
+    },
+    {
+      "option1": "Kèm mã Spotify (M)",
+      "option2": "Đen không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Text bên dưới (L)",
+      "option2": "Trắng không dây",
+      "price": 21000
+    },
+    {
+      "option1": "Trơn (L)",
+      "option2": "Đen kèm dây",
+      "price": 27000
+    },
+    {
+      "option1": "Text bên trên (L)",
+      "option2": "Đen kèm dây",
+      "price": 24000
+    },
+    {
+      "option1": "Text bên dưới (L)",
+      "option2": "Đen kèm dây",
+      "price": 24000
+    },
+    {
+      "option1": "Trơn (L)",
+      "option2": "Trắng không dây",
+      "price": 23000
+    },
+    {
+      "option1": "Kèm mã Spotify (L)",
+      "option2": "Trắng không dây",
+      "price": 22000
+    },
+    {
+      "option1": "Trơn (M)",
+      "option2": "Đen không dây",
+      "price": 23000
+    },
+    {
+      "option1": "Trơn (M)",
+      "option2": "Đen kèm dây",
+      "price": 25000
+    },
+    {
+      "option1": "Text bên trên (M)",
+      "option2": "Đen kèm dây",
+      "price": 22000
+    },
+    {
+      "option1": "Kèm mã Spotify (M)",
+      "option2": "Trắng không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Kèm mã Spotify (L)",
+      "option2": "Đen kèm dây",
+      "price": 25000
+    },
+    {
+      "option1": "Trơn (M)",
+      "option2": "Trắng không dây",
+      "price": 23000
+    },
+    {
+      "option1": "Text + ngày (L)",
+      "option2": "Đen kèm dây",
+      "price": 24000
+    },
+    {
+      "option1": "Text + ngày (M)",
+      "option2": "Trắng kèm dây",
+      "price": 22000
+    },
+    {
+      "option1": "Text bên dưới (M)",
+      "option2": "Đen không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Trơn (L)",
+      "option2": "Trắng kèm dây",
+      "price": 27000
+    },
+    {
+      "option1": "Kèm mã Spotify (L)",
+      "option2": "Trắng kèm dây",
+      "price": 25000
+    },
+    {
+      "option1": "Kèm mã Spotify (M)",
+      "option2": "Đen kèm dây",
+      "price": 23000
+    },
+    {
+      "option1": "Text + ngày (M)",
+      "option2": "Trắng không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Text bên dưới (M)",
+      "option2": "Đen kèm dây",
+      "price": 23000
+    },
+    {
+      "option1": "Kèm mã Spotify (M)",
+      "option2": "Trắng kèm dây",
+      "price": 23000
+    },
+    {
+      "option1": "Text + ngày (L)",
+      "option2": "Trắng không dây",
+      "price": 21000
+    },
+    {
+      "option1": "Trơn (L)",
+      "option2": "Đen không dây",
+      "price": 23000
+    },
+    {
+      "option1": "Kèm mã Spotify (L)",
+      "option2": "Đen không dây",
+      "price": 22000
+    },
+    {
+      "option1": "Text bên trên (M)",
+      "option2": "Trắng kèm dây",
+      "price": 22000
+    },
+    {
+      "option1": "Text bên trên (M)",
+      "option2": "Đen không dây",
+      "price": 20000
+    },
+    {
+      "option1": "Text bên trên (L)",
+      "option2": "Trắng không dây",
+      "price": 21000
+    },
+    {
+      "option1": "Text bên dưới (L)",
+      "option2": "Trắng kèm dây",
+      "price": 24000
+    },
+    {
+      "option1": "Text + ngày (L)",
+      "option2": "Trắng kèm dây",
+      "price": 24000
+    }
+  ]
+}
