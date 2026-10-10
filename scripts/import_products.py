@@ -20,8 +20,12 @@ OUT = Path(__file__).resolve().parent.parent / "src" / "data" / "products"
 # Các ô chỉ sửa trên web, chạy lại script không ghi đè.
 KEEP = ("shortName", "order", "featured", "images", "optionImages", "shopeeUrl", "option1Name", "option2Name")
 
-# Sản phẩm đã gỡ khỏi web (trùng với sản phẩm khác), chạy lại script không tạo lại.
-REMOVED = {"the-in-theo-yeu-cau-kem-spotify-hinh-anh-tu-chon"}
+# Sản phẩm đã gỡ khỏi web, chạy lại script không tạo lại.
+REMOVED = {
+    "the-in-theo-yeu-cau-kem-spotify-hinh-anh-tu-chon",  # trùng card 2 mặt custom
+    "khung-anh-nam-cham-trong-suot-dung-polaroid-size",  # ngừng bán
+    "card-lyric-mini-2-mat-kem-ma-spotify-taylor-swift",  # ngừng bán
+}
 
 CATEGORY_SLUGS = {
     "NFC Keychain": "moc-khoa-nfc",
