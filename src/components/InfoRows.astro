@@ -1,0 +1,24 @@
+---
+import { site } from "../site";
+import type { Product } from "../lib/products";
+interface Props { product: Product }
+const { product } = Astro.props;
+---
+<dl class="info">
+  <div class="row">
+    <dt>Vận chuyển</dt>
+    <dd><span class={product.type === "custom" ? "lead" : ""}>{site.leadTime[product.type]}</span></dd>
+  </div>
+  <div class="row">
+    <dt>Chế độ bảo hành</dt>
+    <dd>{site.warranty}</dd>
+  </div>
+</dl>
+<style>
+  .info { margin: 4px 0 20px; }
+  .row { display: grid; grid-template-columns: 110px 1fr; gap: 12px; margin-bottom: 14px; }
+  dt { color: var(--muted); font-size: .95rem; }
+  dd { margin: 0; font-size: .95rem; }
+  .lead { color: #c46a12; font-weight: 600; }
+  @media (max-width: 480px) { .row { grid-template-columns: 1fr; gap: 2px; } }
+</style>

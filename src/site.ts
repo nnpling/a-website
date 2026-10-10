@@ -7,6 +7,13 @@ export const site = {
   shopeeUrl: "https://shopee.vn/tiemcatsette",
   // TODO: điền khi có, ví dụ "https://zalo.me/0901234567". Để trống thì nút Zalo bị ẩn.
   zaloUrl: "",
+  // Thời gian làm hàng hiện ở mục "Vận chuyển" của trang sản phẩm.
+  leadTime: {
+    custom: "Hàng đặt trước (có hàng sau 6 ngày)",
+    ready: "Hàng có sẵn",
+  },
+  warranty:
+    "Nếu sản phẩm lỗi chip, hỏng hoặc sai yêu cầu, vui lòng gửi ảnh/clip trong vòng 3 ngày từ khi nhận hàng để mình hỗ trợ làm lại miễn phí.",
   socials: {
     facebook: "",
     instagram: "",

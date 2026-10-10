@@ -1,6 +1,6 @@
 {
-  "_ghi_chu": "Thông tin thêm cho từng sản phẩm, theo slug trong products.json. shortName: tên ngắn hiện trên web. featured: hiện ở trang chủ (số nhỏ hiện trước). image: đường dẫn ảnh trong public/images (để trống thì dùng ảnh tạm). shopeeUrl: link listing Shopee riêng (để trống thì dẫn về trang shop).",
-  "moc-khoa-spotify-apple-music-nfc-custom-in-theo": { "shortName": "Móc khoá NFC Spotify / Apple Music custom", "featured": 1, "image": "", "shopeeUrl": "" },
+  "_ghi_chu": "Thông tin thêm cho từng sản phẩm, theo slug trong products.json. shortName: tên ngắn hiện trên web. featured: hiện ở trang chủ (số nhỏ hiện trước). image: đường dẫn ảnh trong public/images (để trống thì dùng ảnh tạm). shopeeUrl: link listing Shopee riêng (để trống thì dẫn về trang shop). optionNames: tên 2 nhóm phân loại (giống Shopee), để trống thì hiện 'Mẫu' và 'Tuỳ chọn'.",
+  "moc-khoa-spotify-apple-music-nfc-custom-in-theo": { "shortName": "Móc khoá NFC Spotify / Apple Music custom", "featured": 1, "image": "", "shopeeUrl": "", "optionNames": ["Khung + Ảnh", "Thêm + Mặt in"] },
   "custom-card-2-mat-kem-spotify-quet-duoc-hinh-anh": { "shortName": "Card 2 mặt custom kèm mã Spotify", "featured": 2, "image": "", "shopeeUrl": "" },
   "card-nfc-spotify-apple-music-custom-2-mat-hinh": { "shortName": "Card NFC custom 2 mặt", "featured": 3, "image": "", "shopeeUrl": "" },
   "the-in-theo-yeu-cau-kem-spotify-hinh-anh-tu-chon": { "shortName": "Thẻ Spotify in theo yêu cầu", "featured": 4, "image": "", "shopeeUrl": "" },
