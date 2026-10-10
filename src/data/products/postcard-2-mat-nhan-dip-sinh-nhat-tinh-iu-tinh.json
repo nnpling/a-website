@@ -3,7 +3,32 @@
   "shortName": "Postcard 2 mặt tìm chữ",
   "categorySlug": "postcard",
   "type": "custom",
-  "images": [],
+  "images": [
+    "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/anh-1.webp",
+    "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/anh-2.webp"
+  ],
+  "optionImages": [
+    {
+      "option": "Adore you",
+      "image": "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/phan-loai-adore-you.webp"
+    },
+    {
+      "option": "You're so cute",
+      "image": "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/phan-loai-you-re-so-cute.webp"
+    },
+    {
+      "option": "Love",
+      "image": "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/phan-loai-love.webp"
+    },
+    {
+      "option": "Luck",
+      "image": "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/phan-loai-luck.webp"
+    },
+    {
+      "option": "You're the best",
+      "image": "/images/postcard-2-mat-nhan-dip-sinh-nhat-tinh-iu-tinh/phan-loai-you-re-the-best.webp"
+    }
+  ],
   "order": 18,
   "shopeeUrl": "",
   "note": "",

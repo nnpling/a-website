@@ -7,6 +7,48 @@
     "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/anh-1.webp",
     "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/anh-2.webp"
   ],
+  "optionImages": [
+    {
+      "option": "Kèm mã Spotify (L)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-kem-ma-spotify-l.webp"
+    },
+    {
+      "option": "Kèm mã Spotify (M)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-kem-ma-spotify-m.webp"
+    },
+    {
+      "option": "Text + ngày (L)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-text-ngay-l.webp"
+    },
+    {
+      "option": "Text + ngày (M)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-text-ngay-m.webp"
+    },
+    {
+      "option": "Text bên dưới (L)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-text-ben-duoi-l.webp"
+    },
+    {
+      "option": "Text bên dưới (M)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-text-ben-duoi-m.webp"
+    },
+    {
+      "option": "Text bên trên (L)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-text-ben-tren-l.webp"
+    },
+    {
+      "option": "Text bên trên (M)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-text-ben-tren-m.webp"
+    },
+    {
+      "option": "Trơn (L)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-tron-l.webp"
+    },
+    {
+      "option": "Trơn (M)",
+      "image": "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/phan-loai-tron-m.webp"
+    }
+  ],
   "order": 12,
   "shopeeUrl": "",
   "note": "",
