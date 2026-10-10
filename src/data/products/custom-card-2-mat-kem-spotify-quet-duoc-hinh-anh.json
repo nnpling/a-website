@@ -1,0 +1,255 @@
+{
+  "name": "Custom card 2 mặt kèm Spotify (quét được) + hình ảnh tự chọn có bo góc trang trí ốp lưng, journal nhiều kích cỡ",
+  "shortName": "Card 2 mặt custom kèm mã Spotify",
+  "categorySlug": "photo-card",
+  "type": "custom",
+  "order": 15,
+  "featured": 2,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "Ko tên trắng 65x54 S",
+      "option2": "Ảnh",
+      "price": 18000
+    },
+    {
+      "option1": "Playing đen, 85x54",
+      "option2": "Lyric",
+      "price": 22000
+    },
+    {
+      "option1": "Ko tên đen, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17000
+    },
+    {
+      "option1": "Lyric, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 19700
+    },
+    {
+      "option1": "Lyric, 85x54",
+      "option2": "Lyric",
+      "price": 10000
+    },
+    {
+      "option1": "Playing đen, 85x54",
+      "option2": "Ảnh",
+      "price": 19700
+    },
+    {
+      "option1": "Playing trắng, 85x54",
+      "option2": "Lyric",
+      "price": 22000
+    },
+    {
+      "option1": "Ko tên đen, 85x54",
+      "option2": "Ảnh",
+      "price": 18000
+    },
+    {
+      "option1": "Tên nền đen, 85x65",
+      "option2": "Lyric",
+      "price": 19700
+    },
+    {
+      "option1": "Code màu, 85x54",
+      "option2": "Code màu",
+      "price": 10000
+    },
+    {
+      "option1": "Tên nền đen, 85x54",
+      "option2": "Ảnh",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền đen, 85x65",
+      "option2": "Ảnh",
+      "price": 20800
+    },
+    {
+      "option1": "Playing trắng, 85x54",
+      "option2": "Ảnh",
+      "price": 19700
+    },
+    {
+      "option1": "Ko tên trắng, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17000
+    },
+    {
+      "option1": "Playing đen, 85x54",
+      "option2": "Code màu",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền đen, 85x65",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 19700
+    },
+    {
+      "option1": "Ko tên đen, 65x54 S",
+      "option2": "Ảnh",
+      "price": 18000
+    },
+    {
+      "option1": "Lyric, 85x54",
+      "option2": "Ảnh",
+      "price": 20800
+    },
+    {
+      "option1": "Tên nền trắng, 85x54",
+      "option2": "Code màu",
+      "price": 19700
+    },
+    {
+      "option1": "Playing trắng, 85x54",
+      "option2": "Code màu",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền trắng, 85x65",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền đen, 85x54",
+      "option2": "Lyric",
+      "price": 20800
+    },
+    {
+      "option1": "Ko tên trắng 65x54 S",
+      "option2": "Lyric",
+      "price": 12100
+    },
+    {
+      "option1": "Ko tên trắng, 85x54",
+      "option2": "Lyric",
+      "price": 18600
+    },
+    {
+      "option1": "Tên nền đen, 85x54",
+      "option2": "Code màu",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền trắng, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17500
+    },
+    {
+      "option1": "Code màu, 85x54",
+      "option2": "Ảnh",
+      "price": 25000
+    },
+    {
+      "option1": "Tên nền trắng, 85x65",
+      "option2": "Ảnh",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền đen, 85x65",
+      "option2": "Code màu",
+      "price": 19700
+    },
+    {
+      "option1": "Ko tên trắng 65x54 S",
+      "option2": "Code màu",
+      "price": 12100
+    },
+    {
+      "option1": "Playing trắng, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17500
+    },
+    {
+      "option1": "Ko tên đen, 85x54",
+      "option2": "Code màu",
+      "price": 16500
+    },
+    {
+      "option1": "Code màu, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền trắng, 85x65",
+      "option2": "Code màu",
+      "price": 19700
+    },
+    {
+      "option1": "Ko tên trắng, 85x54",
+      "option2": "Code màu",
+      "price": 16500
+    },
+    {
+      "option1": "Ko tên đen, 65x54 S",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17000
+    },
+    {
+      "option1": "Tên nền đen, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17500
+    },
+    {
+      "option1": "Lyric, 85x54",
+      "option2": "Code màu",
+      "price": 27000
+    },
+    {
+      "option1": "Playing đen, 85x54",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17500
+    },
+    {
+      "option1": "Ko tên trắng, 85x54",
+      "option2": "Ảnh",
+      "price": 18000
+    },
+    {
+      "option1": "Tên nền trắng, 85x54",
+      "option2": "Ảnh",
+      "price": 19700
+    },
+    {
+      "option1": "Tên nền trắng, 85x54",
+      "option2": "Lyric",
+      "price": 20800
+    },
+    {
+      "option1": "Ko tên đen, 85x54",
+      "option2": "Lyric",
+      "price": 18600
+    },
+    {
+      "option1": "Ko tên đen, 65x54 S",
+      "option2": "Lyric",
+      "price": 12100
+    },
+    {
+      "option1": "Code màu, 85x54",
+      "option2": "Lyric",
+      "price": 27000
+    },
+    {
+      "option1": "Ko tên trắng 65x54 S",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 17000
+    },
+    {
+      "option1": "Ko tên đen, 65x54 S",
+      "option2": "Code màu",
+      "price": 12100
+    },
+    {
+      "option1": "Tên nền trắng, 85x65",
+      "option2": "Lyric",
+      "price": 19700
+    }
+  ]
+}

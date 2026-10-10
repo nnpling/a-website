@@ -1,13 +1,24 @@
-import raw from "../data/products.json";
-import extras from "../data/product-extras.json";
 import { site } from "../site";
 
-type Extra = {
+// Mỗi sản phẩm là một file trong src/data/products/ (tên file = slug trên web).
+// Sửa trong trang quản lý /admin hoặc sửa thẳng file JSON.
+type ProductFile = {
+  name: string;
   shortName?: string;
-  featured?: number;
+  categorySlug: string;
+  type: "ready" | "custom";
+  order?: number | null;
+  featured?: number | null;
   image?: string;
   shopeeUrl?: string;
-  optionNames?: string[];
+  note?: string;
+  // Chỉ dùng cho hàng có sẵn không có bảng phân loại.
+  priceMin?: number | null;
+  priceMax?: number | null;
+  variantCount?: number | null;
+  option1Name?: string;
+  option2Name?: string;
+  variants?: { option1?: string; option2?: string; price?: number | null }[];
 };
 
 // options: các giá trị phân loại của biến thể, vd ["Khung tròn đĩa CD", "+ móc sao, in 2 mặt"]
@@ -19,7 +30,6 @@ export type Product = {
   slug: string;
   name: string;
   shortName: string;
-  category: string;
   categorySlug: string;
   type: "ready" | "custom";
   variantCount: number;
@@ -33,42 +43,54 @@ export type Product = {
   shopeeUrl: string;
 };
 
-const extraMap = extras as unknown as Record<string, Extra>;
+const files = import.meta.glob<ProductFile>("../data/products/*.json", { eager: true, import: "default" });
 
 const DEFAULT_OPTION_NAMES = ["Mẫu", "Tuỳ chọn"];
 
-type RawProduct = Omit<Product, "shortName" | "shopeeUrl" | "optionGroups" | "variants"> & {
-  variants: { label: string; price: number | null }[];
-};
-
-// Shopee nối các phân loại bằng dấu phẩy không có khoảng trắng phía sau
-// ("Khung tròn đĩa CD,+ móc sao, in 2 mặt"), còn dấu phẩy bên trong một phân loại có khoảng trắng.
-const splitOptions = (label: string) => label.split(/,(?=\S)/).map((s) => s.trim());
+// Ô số để trống trong trang quản lý có thể lưu thành null hoặc "".
+const num = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
 
 function buildOptionGroups(variants: Variant[], names: string[]): OptionGroup[] {
   const count = Math.max(0, ...variants.map((v) => v.options.length));
   return Array.from({ length: count }, (_, i) => ({
-    name: names[i] ?? DEFAULT_OPTION_NAMES[i] ?? `Tuỳ chọn ${i + 1}`,
+    name: names[i] || DEFAULT_OPTION_NAMES[i] || `Tuỳ chọn ${i + 1}`,
     values: [...new Set(variants.map((v) => v.options[i]).filter(Boolean))],
   }));
 }
 
-export const products: Product[] = (raw as RawProduct[]).map((p) => {
-  const e = extraMap[p.slug] ?? {};
-  const variants = p.variants.map((v) => {
-    const options = splitOptions(v.label);
-    return { ...v, options, label: options.join(" · ") };
-  });
+function toProduct(path: string, p: ProductFile): Product {
+  const slug = path.split("/").pop()!.replace(/\.json$/, "");
+  const variants: Variant[] = (p.variants ?? [])
+    .map((v) => {
+      const options = [v.option1, v.option2].map((o) => o?.trim() ?? "").filter(Boolean);
+      return { options, label: options.join(" · "), price: num(v.price) };
+    })
+    .filter((v) => v.options.length);
+  const prices = variants.map((v) => v.price).filter((n): n is number => n !== null);
+  const priceMin = prices.length ? Math.min(...prices) : num(p.priceMin) ?? 0;
+  const priceMax = prices.length ? Math.max(...prices) : num(p.priceMax) ?? priceMin;
   return {
-    ...p,
+    slug,
+    name: p.name,
+    shortName: p.shortName || p.name,
+    categorySlug: p.categorySlug,
+    type: p.type,
+    variantCount: variants.length || num(p.variantCount) || 1,
+    priceMin,
+    priceMax: Math.max(priceMin, priceMax),
+    note: p.note || null,
     variants,
-    optionGroups: buildOptionGroups(variants, e.optionNames ?? []),
-    shortName: e.shortName || p.name,
-    featured: e.featured,
-    image: e.image || undefined,
-    shopeeUrl: e.shopeeUrl || site.shopeeUrl,
+    optionGroups: buildOptionGroups(variants, [p.option1Name ?? "", p.option2Name ?? ""]),
+    featured: num(p.featured) ?? undefined,
+    image: p.image || undefined,
+    shopeeUrl: p.shopeeUrl || site.shopeeUrl,
   };
-});
+}
+
+export const products: Product[] = Object.entries(files)
+  .map(([path, p]) => ({ order: num(p.order) ?? Infinity, product: toProduct(path, p) }))
+  .sort((a, b) => a.order - b.order || a.product.slug.localeCompare(b.product.slug))
+  .map((x) => x.product);
 
 // Thứ tự hiển thị danh mục: hàng bán chạy (làm theo yêu cầu) lên trước.
 export const categories = [

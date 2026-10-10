@@ -1,0 +1,465 @@
+{
+  "name": "card NFC Spotify/Apple Music custom 2 mặt hình ảnh tự chọn có bo góc trang trí ốp lưng, journal nhiều kích cỡ",
+  "shortName": "Card NFC custom 2 mặt",
+  "categorySlug": "card-nfc",
+  "type": "custom",
+  "order": 13,
+  "featured": 3,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Polaroid đen",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Polaroid hoa hồng",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Polaroid đen",
+      "price": 100000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Polaroid trắng",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Lyric nền trơn",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Polaroid hoa hồng",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Polaroid nơ",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Ảnh",
+      "price": 32000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Polaroid đen",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Polaroid chanh vàng",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 32000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Polaroid hoa hồng",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Polaroid chanh vàng",
+      "price": 38000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Polaroid hoa hồng",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 27000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 25000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Polaroid trắng",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Polaroid chanh vàng",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Polaroid nơ",
+      "price": 40000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 27000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Polaroid nơ",
+      "price": 38000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Polaroid chanh vàng",
+      "price": 35000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Polaroid trắng",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Polaroid nơ",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Lyric nền trơn",
+      "price": 38000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Lyric nền trơn",
+      "price": 32000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Polaroid đen",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Polaroid chanh vàng",
+      "price": 100000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Polaroid hoa hồng",
+      "price": 100000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Lyric nền gradient",
+      "price": 35000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Lyric nền gradient",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 25000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Polaroid trắng",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Polaroid trắng",
+      "price": 100000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Polaroid đen",
+      "price": 38000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Polaroid trắng",
+      "price": 38000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Lyric nền gradient",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Polaroid trắng",
+      "price": 38000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Polaroid hoa hồng",
+      "price": 38000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Polaroid nơ",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Polaroid đen",
+      "price": 38000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Lyric nền gradient",
+      "price": 100000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Polaroid nơ",
+      "price": 38000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Lyric nền gradient",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Lyric nền trơn",
+      "price": 30000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Ảnh",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Polaroid nơ",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Lyric nền trơn",
+      "price": 35000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Lyric nền trơn",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Lyric nền trơn",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Polaroid trắng",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Polaroid chanh vàng",
+      "price": 38000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Lyric nền gradient",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 30000
+    },
+    {
+      "option1": "Lyric nền gradient",
+      "option2": "Lyric nền gradient",
+      "price": 30000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Polaroid chanh vàng",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Polaroid đen",
+      "price": 35000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Polaroid hoa hồng",
+      "price": 35000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Polaroid trắng",
+      "price": 33000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Lyric nền trơn",
+      "price": 36000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Ảnh",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Polaroid chanh vàng",
+      "price": 40000
+    },
+    {
+      "option1": "Playing nền trắng",
+      "option2": "Để trống (in 1 mặt)",
+      "price": 27000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Polaroid hoa hồng",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid hoa hồng",
+      "option2": "Polaroid chanh vàng",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Lyric nền gradient",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid chanh vàng",
+      "option2": "Polaroid chanh vàng",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Polaroid trắng",
+      "price": 38000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Polaroid nơ",
+      "price": 100000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Lyric nền gradient",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Polaroid hoa hồng",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Polaroid nơ",
+      "price": 40000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Polaroid đen",
+      "price": 38000
+    },
+    {
+      "option1": "Playing nền đen",
+      "option2": "Lyric nền trơn",
+      "price": 35000
+    },
+    {
+      "option1": "Polaroid trắng",
+      "option2": "Polaroid hoa hồng",
+      "price": 38000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Polaroid đen",
+      "price": 33000
+    },
+    {
+      "option1": "Polaroid nơ",
+      "option2": "Lyric nền trơn",
+      "price": 30000
+    },
+    {
+      "option1": "Polaroid đen",
+      "option2": "Polaroid đen",
+      "price": 35000
+    },
+    {
+      "option1": "Lyric nền trơn",
+      "option2": "Lyric nền gradient",
+      "price": 30000
+    },
+    {
+      "option1": "Ảnh",
+      "option2": "Polaroid nơ",
+      "price": 35000
+    }
+  ]
+}

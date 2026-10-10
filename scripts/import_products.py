@@ -1,10 +1,11 @@
-"""Chuyển file Catsette_Danh_Sach_San_Pham.xlsx thành src/data/products.json.
+"""Cập nhật sản phẩm trong src/data/products/ từ file Catsette_Danh_Sach_San_Pham.xlsx.
 
 Cách dùng:
     python3 scripts/import_products.py duong/dan/Catsette_Danh_Sach_San_Pham.xlsx
 
-Ảnh, link Shopee và sản phẩm nổi bật nằm ở src/data/product-extras.json,
-không bị ghi đè khi chạy lại script này.
+Script ghi đè tên, danh mục, giá và bảng phân loại theo Excel (kể cả giá đã sửa
+trong trang /admin). Tên ngắn, ảnh, link Shopee, thứ tự, sản phẩm nổi bật và tên
+nhóm phân loại được giữ nguyên. Sản phẩm không còn trong Excel không bị xoá.
 """
 import json
 import re
@@ -14,7 +15,10 @@ from pathlib import Path
 
 import openpyxl
 
-OUT = Path(__file__).resolve().parent.parent / "src" / "data" / "products.json"
+OUT = Path(__file__).resolve().parent.parent / "src" / "data" / "products"
+
+# Các ô chỉ sửa trên web, chạy lại script không ghi đè.
+KEEP = ("shortName", "order", "featured", "image", "shopeeUrl", "option1Name", "option2Name")
 
 CATEGORY_SLUGS = {
     "NFC Keychain": "moc-khoa-nfc",
@@ -42,6 +46,11 @@ def parse_price(value):
         return int(value), int(value)
     nums = [int(n.replace(".", "")) for n in re.findall(r"\d[\d.]*", str(value or ""))]
     return (min(nums), max(nums)) if nums else (None, None)
+
+
+def split_options(label):
+    """Shopee nối 2 phân loại bằng dấu phẩy liền chữ ("Khung tròn,+ móc sao, in 2 mặt")."""
+    return [o.strip() for o in re.split(r",(?=\S)", label)][:2]
 
 
 def unique_slug(name, used):
@@ -100,8 +109,31 @@ def main(path):
             p["priceMin"], p["priceMax"] = min(prices), max(prices)
             p["note"] = None
 
-    OUT.write_text(json.dumps(products, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Đã ghi {len(products)} sản phẩm vào {OUT}")
+    OUT.mkdir(parents=True, exist_ok=True)
+    for i, p in enumerate(products, 1):
+        path = OUT / f"{p['slug']}.json"
+        old = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+        data = {
+            "name": p["name"],
+            "shortName": p["name"],
+            "categorySlug": p["categorySlug"],
+            "type": p["type"],
+            "order": i,
+            "image": "",
+            "shopeeUrl": "",
+            "note": p["note"] or "",
+            "option1Name": "",
+            "option2Name": "",
+        }
+        data.update({k: old[k] for k in KEEP if k in old})
+        if p["type"] == "ready":
+            data.update(priceMin=p["priceMin"], priceMax=p["priceMax"], variantCount=p["variantCount"])
+        data["variants"] = [
+            dict(zip(("option1", "option2"), split_options(v["label"]) + [""]), price=v["price"])
+            for v in p["variants"]
+        ]
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Đã cập nhật {len(products)} sản phẩm trong {OUT}")
 
 
 if __name__ == "__main__":

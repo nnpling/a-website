@@ -1,0 +1,74 @@
+{
+  "name": "Sleeve bọc bảo vệ thẻ nhiều kích thước",
+  "shortName": "Sleeve bọc bảo vệ thẻ",
+  "categorySlug": "phu-kien",
+  "type": "custom",
+  "order": 17,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "9 x 6.5 cm không dán",
+      "option2": "1 cái",
+      "price": 9000
+    },
+    {
+      "option1": "9 x 6.5 cm không dán",
+      "option2": "20 cái",
+      "price": 30000
+    },
+    {
+      "option1": "8.7 x 5.7 có dán",
+      "option2": "1 cái",
+      "price": 10000
+    },
+    {
+      "option1": "8.7 x 5.7 không dán",
+      "option2": "5 cái",
+      "price": 10000
+    },
+    {
+      "option1": "9 x 6.5 cm không dán",
+      "option2": "5 cái",
+      "price": 13000
+    },
+    {
+      "option1": "9 x 6.5 cm không dán",
+      "option2": "10 cái",
+      "price": 21000
+    },
+    {
+      "option1": "8.7 x 5.7 không dán",
+      "option2": "20 cái",
+      "price": 27000
+    },
+    {
+      "option1": "8.7 x 5.7 có dán",
+      "option2": "10 cái",
+      "price": 23000
+    },
+    {
+      "option1": "8.7 x 5.7 có dán",
+      "option2": "20 cái",
+      "price": 32000
+    },
+    {
+      "option1": "8.7 x 5.7 không dán",
+      "option2": "10 cái",
+      "price": 18000
+    },
+    {
+      "option1": "8.7 x 5.7 có dán",
+      "option2": "5 cái",
+      "price": 15000
+    },
+    {
+      "option1": "8.7 x 5.7 không dán",
+      "option2": "1 cái",
+      "price": 9000
+    }
+  ]
+}

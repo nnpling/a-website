@@ -1,0 +1,64 @@
+{
+  "name": "Postcard 2 mặt nhân dịp sinh nhật tình iu, tình bạn, chúc may mắn dui dẻ dui dẻ kiểu tìm chữ size 10x7.5 cm có bo góc",
+  "shortName": "Postcard 2 mặt tìm chữ",
+  "categorySlug": "postcard",
+  "type": "custom",
+  "order": 18,
+  "image": "",
+  "shopeeUrl": "",
+  "note": "",
+  "option1Name": "",
+  "option2Name": "",
+  "variants": [
+    {
+      "option1": "You're so cute",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Luck",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "You're the best",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "Luck",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Adore you",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Love",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Love",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    },
+    {
+      "option1": "You're the best",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "You're so cute",
+      "option2": "Không bao thư",
+      "price": 20000
+    },
+    {
+      "option1": "Adore you",
+      "option2": "Có bao thư kraft",
+      "price": 25000
+    }
+  ]
+}
