@@ -94,5 +94,5 @@
   });
 
   CMS.registerPreviewStyle("/admin/preview.css");
-  CMS.registerPreviewTemplate("products", ProductPreview);
+  for (const name of ["products", "products_live", "products_hidden"]) CMS.registerPreviewTemplate(name, ProductPreview);
 })();

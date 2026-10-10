@@ -65,8 +65,9 @@ singletons:
           - { name: tiktok, label: TikTok, required: false }
 
 collections:
+  # 3 mục cùng đọc thư mục sản phẩm, giống tab Tất cả / Đang hoạt động / Đã ẩn của Shopee.
   - name: products
-    label: Sản phẩm
+    label: Tất cả sản phẩm
     label_singular: sản phẩm
     folder: src/data/products
     format: json
@@ -76,25 +77,23 @@ collections:
     identifier_field: shortName
     # Tên file = đường dẫn trên web (/san-pham/ten-file). Đổi tên ngắn sau này không đổi đường dẫn.
     slug: "{{shortName}}"
-    description: "Bấm vào sản phẩm để sửa. Muốn tạm ẩn sản phẩm khỏi web thì bật ô \"Ẩn khỏi web\" rồi Lưu. Dùng nút Lọc để xem riêng sản phẩm đang hiện hoặc đang ẩn."
+    description: "Bấm vào sản phẩm để sửa. Muốn tạm ẩn sản phẩm khỏi web thì bật ô \"Ẩn khỏi web\" rồi Lưu. Mục Đang hiện / Đang ẩn ở cột bên trái để xem riêng từng loại."
     summary: "{{hidden | ternary('🙈 Đang ẩn · ', '')}}{{shortName}}"
     thumbnail: images.0
-    sortable_fields:
+    sortable_fields: &productSort
       fields: [order, shortName, categorySlug]
       default: { field: order }
-    view_filters:
+    view_filters: &productFilters
       filters:
-        - { name: visible, label: Đang hiện, field: hidden, ne: true }
-        - { name: hidden, label: Đang ẩn, field: hidden, eq: true }
         - { name: custom, label: Làm theo yêu cầu, field: type, eq: custom }
         - { name: ready, label: Có sẵn, field: type, eq: ready }
         - { name: featured, label: Hiện ở trang chủ, field: featured, gte: 1 }
-    view_groups:
+    view_groups: &productGroups
       groups:
         - { name: category, label: Danh mục, field: categorySlug }
         - { name: status, label: Ẩn / hiện, field: hidden }
         - { name: type, label: Loại hàng, field: type }
-    fields:
+    fields: &productFields
       - { name: hidden, label: Ẩn khỏi web, widget: boolean, default: false, required: false, hint: "Bật lên thì sản phẩm biến mất khỏi web (trang chủ, danh sách và trang riêng của nó). Tắt đi là hiện lại." }
       - { name: shortName, label: Tên ngắn, hint: "Tên hiện trên thẻ sản phẩm và tiêu đề trang." }
       - { name: name, label: Tên đầy đủ, widget: text, hint: "Tên dài như trên Shopee." }
@@ -151,3 +150,43 @@ collections:
       - { name: priceMin, label: Giá thấp nhất (đồng), widget: number, value_type: int, required: false, hint: "Chỉ dùng khi bảng phân loại để trống (hàng có sẵn)." }
       - { name: priceMax, label: Giá cao nhất (đồng), widget: number, value_type: int, required: false, hint: "Chỉ dùng khi bảng phân loại để trống." }
       - { name: variantCount, label: Số mẫu, widget: number, value_type: int, required: false, hint: "Chỉ dùng khi bảng phân loại để trống, hiện thành 'Có N mẫu để chọn'." }
+
+  - name: products_live
+    label: Đang hiện
+    label_singular: sản phẩm
+    description: Sản phẩm khách đang thấy trên web.
+    icon: visibility
+    folder: src/data/products
+    format: json
+    extension: json
+    filter: { field: hidden, value: [false, null] }
+    create: true
+    delete: true
+    identifier_field: shortName
+    slug: "{{shortName}}"
+    summary: "{{shortName}}"
+    thumbnail: images.0
+    sortable_fields: *productSort
+    view_filters: *productFilters
+    view_groups: *productGroups
+    fields: *productFields
+
+  - name: products_hidden
+    label: Đang ẩn
+    label_singular: sản phẩm
+    description: Sản phẩm đang ẩn, khách không thấy trên web. Mở sản phẩm, tắt "Ẩn khỏi web" rồi Lưu để hiện lại.
+    icon: visibility_off
+    folder: src/data/products
+    format: json
+    extension: json
+    filter: { field: hidden, value: true }
+    create: false
+    delete: true
+    identifier_field: shortName
+    slug: "{{shortName}}"
+    summary: "{{shortName}}"
+    thumbnail: images.0
+    sortable_fields: *productSort
+    view_filters: *productFilters
+    view_groups: *productGroups
+    fields: *productFields
