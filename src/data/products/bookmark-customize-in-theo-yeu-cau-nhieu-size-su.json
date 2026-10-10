@@ -3,8 +3,11 @@
   "shortName": "Bookmark custom theo yêu cầu",
   "categorySlug": "bookmark",
   "type": "custom",
+  "images": [
+    "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/anh-1.webp",
+    "/images/bookmark-customize-in-theo-yeu-cau-nhieu-size-su/anh-2.webp"
+  ],
   "order": 12,
-  "image": "",
   "shopeeUrl": "",
   "note": "",
   "option1Name": "",

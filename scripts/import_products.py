@@ -18,7 +18,7 @@ import openpyxl
 OUT = Path(__file__).resolve().parent.parent / "src" / "data" / "products"
 
 # Các ô chỉ sửa trên web, chạy lại script không ghi đè.
-KEEP = ("shortName", "order", "featured", "image", "shopeeUrl", "option1Name", "option2Name")
+KEEP = ("shortName", "order", "featured", "images", "optionImages", "shopeeUrl", "option1Name", "option2Name")
 
 CATEGORY_SLUGS = {
     "NFC Keychain": "moc-khoa-nfc",
@@ -119,13 +119,15 @@ def main(path):
             "categorySlug": p["categorySlug"],
             "type": p["type"],
             "order": i,
-            "image": "",
+            "images": [],
             "shopeeUrl": "",
             "note": p["note"] or "",
             "option1Name": "",
             "option2Name": "",
         }
         data.update({k: old[k] for k in KEEP if k in old})
+        if old.get("image") and not data["images"]:
+            data["images"] = [old["image"]]
         if p["type"] == "ready":
             data.update(priceMin=p["priceMin"], priceMax=p["priceMax"], variantCount=p["variantCount"])
         data["variants"] = [

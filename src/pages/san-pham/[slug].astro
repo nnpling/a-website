@@ -1,6 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
-import ProductImage from "../../components/ProductImage.astro";
+import ProductGallery from "../../components/ProductGallery.astro";
 import ProductCard from "../../components/ProductCard.astro";
 import BuyButtons from "../../components/BuyButtons.astro";
 import VariantPicker from "../../components/VariantPicker.astro";
@@ -18,7 +18,7 @@ const related = products.filter((p) => p.categorySlug === product.categorySlug &
   <div class="wrap section">
     <p class="crumbs"><a href="/san-pham/">Sản phẩm</a> / <a href={`/san-pham/#${product.categorySlug}`}>{categoryName(product.categorySlug)}</a></p>
     <div class="layout">
-      <div class="media"><ProductImage product={product} /></div>
+      <div class="media"><ProductGallery product={product} /></div>
       <div>
         <p class="tag">{product.type === "custom" ? "Làm theo yêu cầu" : "Có sẵn"}</p>
         <h1>{product.shortName}</h1>
@@ -46,7 +46,7 @@ const related = products.filter((p) => p.categorySlug === product.categorySlug &
   .crumbs { font-size: .9rem; color: var(--muted); margin: 0 0 16px; }
   .layout { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; align-items: start; }
   @media (max-width: 720px) { .layout { grid-template-columns: 1fr; } }
-  .media { aspect-ratio: 1; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+  .media { min-width: 0; }
   .tag { display: inline-block; margin: 0; background: var(--soft); color: var(--accent-ink); font-weight: 600; font-size: .8rem; padding: 4px 10px; border-radius: 999px; }
   h1 { margin: 12px 0 8px; font-size: clamp(1.5rem, 3.5vw, 2.2rem); }
   .info { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin: 16px 0 20px; }
