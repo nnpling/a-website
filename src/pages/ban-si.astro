@@ -1,0 +1,44 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../site";
+const w = site.wholesale;
+---
+<Base title="Bán sỉ" description="Giá sỉ móc khoá NFC Spotify custom của Catsette khi đặt từ 10 cái.">
+  <div class="wrap section narrow">
+    <h1>Bán sỉ móc khoá NFC</h1>
+    <p>{w.intro}</p>
+    <div class="table">
+      <table>
+        <thead>
+          <tr><th>Số lượng</th><th>Chung 1 mẫu</th><th>Khác mẫu</th></tr>
+        </thead>
+        <tbody>
+          {w.tiers.map((t) => <tr><td>{t.qty}</td><td>{t.same}</td><td>{t.mixed}</td></tr>)}
+        </tbody>
+      </table>
+    </div>
+    {w.example && <p class="muted">{w.example}</p>}
+    <h2>Lưu ý</h2>
+    <ul>
+      {w.notes.map((n) => <li>{n}</li>)}
+    </ul>
+    <h2>Đặt sỉ</h2>
+    <p>Nhắn tiệm số lượng, phân loại móc khoá và hình, bài hát bạn muốn in để được báo giá chính xác.</p>
+    <div class="buy">
+      {site.zaloUrl && <a class="btn primary" href={site.zaloUrl} target="_blank" rel="noopener">Nhắn Zalo</a>}
+      <a class={site.zaloUrl ? "btn" : "btn primary"} href={site.shopeeUrl} target="_blank" rel="noopener">Chat với tiệm trên Shopee</a>
+    </div>
+  </div>
+</Base>
+<style>
+  .narrow { max-width: 760px; }
+  h2 { margin-top: 40px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .table { overflow-x: auto; margin: 24px 0 12px; }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+  th { background: var(--soft); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  .buy { display: flex; flex-wrap: wrap; gap: 10px; }
+</style>

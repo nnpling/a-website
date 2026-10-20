@@ -55,6 +55,22 @@ singletons:
           - { name: custom, label: Hàng làm theo yêu cầu }
           - { name: ready, label: Hàng có sẵn }
       - { name: warranty, label: Chế độ bảo hành, widget: text }
+      - name: wholesale
+        label: Bán sỉ (trang /ban-si)
+        widget: object
+        fields:
+          - { name: intro, label: Giới thiệu, widget: text }
+          - name: tiers
+            label: Bảng giá sỉ
+            widget: list
+            label_singular: mức
+            summary: "{{qty}}: {{same}} / {{mixed}}"
+            fields:
+              - { name: qty, label: Số lượng, hint: "Ví dụ 10–19 cái" }
+              - { name: same, label: Chung 1 mẫu, hint: "Ví dụ Giảm 25% hoặc 20.000đ/cái" }
+              - { name: mixed, label: Khác mẫu }
+          - { name: example, label: Ví dụ tính giá, widget: text, required: false }
+          - { name: notes, label: Lưu ý, widget: list, field: { name: note, label: Lưu ý, widget: text } }
       - name: socials
         label: Mạng xã hội
         widget: object

@@ -13,5 +13,33 @@
     "facebook": "",
     "instagram": "",
     "tiktok": ""
+  },
+  "wholesale": {
+    "intro": "Đặt từ 10 móc khoá NFC trở lên trong 1 đơn (quà lớp, quà sự kiện, fanclub, quà tặng công ty) sẽ được tính giá sỉ theo bảng dưới. Giảm theo % trên giá lẻ của từng phân loại.",
+    "tiers": [
+      {
+        "qty": "10–19 cái",
+        "same": "Giảm 25%",
+        "mixed": "Giảm 15%"
+      },
+      {
+        "qty": "20–49 cái",
+        "same": "Giảm 30%",
+        "mixed": "Giảm 20%"
+      },
+      {
+        "qty": "Từ 50 cái",
+        "same": "Báo giá riêng",
+        "mixed": "Báo giá riêng"
+      }
+    ],
+    "example": "Ví dụ móc khoá khung tròn, móc tròn, không kim tuyến (giá lẻ 26.000đ): 10 cái chung 1 mẫu còn 20.000đ/cái, 10 cái khác mẫu còn 22.000đ/cái.",
+    "notes": [
+      "Chung 1 mẫu: tất cả móc khoá dùng cùng 1 hình và 1 bài hát.",
+      "Khác mẫu: mỗi cái 1 hình hoặc 1 bài hát riêng. Giá cao hơn vì tiệm phải xử lý ảnh, gửi duyệt và cài nhạc riêng cho từng cái.",
+      "Cọc 50% khi chốt đơn, phần còn lại thanh toán trước khi gửi hàng.",
+      "Tiệm gửi bản thiết kế để bạn duyệt trước khi in. Đổi hình hoặc bài hát sau khi đã duyệt sẽ tính phí in lại.",
+      "Thời gian làm đơn sỉ khoảng 7–10 ngày tuỳ số lượng. Phí ship do người mua trả."
+    ]
   }
 }
